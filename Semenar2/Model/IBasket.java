@@ -8,4 +8,5 @@ public interface IBasket {
     Collection<IProduct> getProducts();
     boolean isPaid();
     String getCode();
+    void setCode(String code);
 }

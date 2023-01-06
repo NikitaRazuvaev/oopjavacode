@@ -23,5 +23,10 @@ public class Avtomat implements IAvtomat {
     public GeoPoint getPoint() {
         return point;
     }
+
+    @Override
+    public boolean isProductApplicable(IProduct product) {
+        return true;
+    }
     
 }

@@ -6,4 +6,6 @@ public interface IBasketRepository{
     IBasket update(IBasket basket);
     boolean delete(IBasket basket);
 
+    IBasket getByCode(String code);
+    IBasket getOrCreateForUser(IUser user);
 }

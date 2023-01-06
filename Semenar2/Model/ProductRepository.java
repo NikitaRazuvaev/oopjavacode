@@ -1,13 +1,12 @@
 package Semenar2.Model;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
-
-import org.w3c.dom.ranges.RangeException;
-
+import java.util.ArrayList;
 import java.util.Collections;
 
-public class ProductRepository implements IProuductRepository{
+public class ProductRepository implements IProductRepository{
     
     private Map<Integer, IProduct> products;
     public ProductRepository(){
@@ -43,6 +42,16 @@ public class ProductRepository implements IProuductRepository{
             return true;
         }
         return false;
+    }
+    @Override
+    public List<IProduct> getProductByAvtomatID(int avtomatID) {
+        List<IProduct> result = new ArrayList<>();
+        for (IProduct product : products.values()) {
+            if (product.getLocation().getId() == avtomatID) {
+                result.add(product);
+            }
+        }
+        return result;
     }
     
 }

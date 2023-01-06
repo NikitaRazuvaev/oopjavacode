@@ -54,6 +54,10 @@ public class Basket implements IBasket{
     public String getCode() {
         return code;
     }
- 
     
+    @Override
+    public void setCode(String code) {
+        this.ispaid = true;
+        this.code = code;
+    }
 }

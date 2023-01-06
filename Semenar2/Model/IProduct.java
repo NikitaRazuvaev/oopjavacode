@@ -4,5 +4,6 @@ public interface IProduct {
     int getId();
     String getName();
     IAvtomat getLocation();
+    double getPrice();
     
 }
