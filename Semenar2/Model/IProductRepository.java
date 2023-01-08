@@ -1,5 +1,6 @@
 package Semenar2.Model;
 
+import java.util.Collection;
 import java.util.List;
 
 public interface IProductRepository {
@@ -8,5 +9,7 @@ public interface IProductRepository {
     IProduct update(IProduct product);
     boolean delete(IProduct product);
 
+    Collection<IProduct> getAll();
     List<IProduct> getProductByAvtomatID(int avtomatID);
+    
 }

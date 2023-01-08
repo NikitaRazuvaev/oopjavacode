@@ -5,6 +5,7 @@ public class Product implements IProduct{
     private String name;
     private IAvtomat location;
     private double price;
+    private boolean best;
     
     public Product(int id, String name, IAvtomat location, double price){
         this.id = id;
@@ -37,6 +38,11 @@ public class Product implements IProduct{
     @Override
     public double getPrice() {
         return price;
+    }
+
+    @Override
+    public boolean isBestProduct() {
+        return false;
     }
     
 }

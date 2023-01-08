@@ -1,13 +1,13 @@
 package Semenar2.Model;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
 import org.w3c.dom.ranges.RangeException;
 
-import java.util.Collections;
 
-public class UserRepository implements IUserRepository {
+public class UserRepository extends AbstractRepository implements IUserRepository {
 
     private Map<Integer, IUser> users;
     
@@ -15,10 +15,14 @@ public class UserRepository implements IUserRepository {
         users = new HashMap<>();
     }
     
+    public Collection<IUser> getAll()  {
+        return users.values();
+    }
+    
     @Override
     public IUser create(IUser user) {
         if (user.getId() == 0){
-            int newId = Collections.max(users.keySet()) +1 ;
+            int newId = calculetNextKey(users.keySet()) ;
             IUser newUser = new User(newId, user);
             users.put(Integer.valueOf(newId), newUser);
             return newUser;
@@ -55,16 +59,5 @@ public class UserRepository implements IUserRepository {
         }
         return false;
     }
-
-    @Override
-    public IUser getByName(String name) {
-        for (IUser user : users.values()) {
-            if (user.getName()==name){
-                return user;
-            }
-        }
-        return null;
-    }
-
     
 }

@@ -8,6 +8,7 @@ public interface IAvtomatRepository {
     IAvtomat update(IAvtomat avtomat);
     boolean delete(IAvtomat avtomat);
 
+
     Collection<IAvtomat> getAll();
     
 }

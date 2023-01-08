@@ -1,6 +1,6 @@
 package Semenar2.Views;
 
-import Semenar2.Model.Avtomat;
+
 import Semenar2.Model.GeoPoint;
 import Semenar2.Model.IAvtomat;
 

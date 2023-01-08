@@ -6,19 +6,23 @@ import java.util.Map;
 import org.w3c.dom.ranges.RangeException;
 
 import java.util.ArrayList;
-import java.util.Collections;
+import java.util.Collection;
 
 
-public class BasketRepository implements IBasketRepository{
+
+public class BasketRepository extends AbstractRepository implements IBasketRepository{
 
     private Map<Integer, IBasket> baskets;
     public BasketRepository(){
         baskets = new HashMap<>();
     }
+    public Collection<IBasket> getAll()  {
+        return baskets.values();
+    }
     @Override
     public IBasket create(IBasket basket) {
         if (basket.getId() ==0 ){
-            int newId = Collections.max(baskets.keySet()) +1 ;
+            int newId = calculetNextKey(baskets.keySet());
             IBasket newBasket = new Basket(newId, basket);
             baskets.put(Integer.valueOf(newId), newBasket);
             return newBasket;
@@ -54,15 +58,6 @@ public class BasketRepository implements IBasketRepository{
         return false;
     }
 
-    @Override
-    public IBasket getByCode(String code) {
-        for (IBasket basket : baskets.values()) {
-            if (basket.getCode()==code) {
-                return basket;
-            }
-        }
-        return null;
-    }
 
     @Override
     public IBasket getOrCreateForUser(IUser user) {

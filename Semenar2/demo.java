@@ -3,8 +3,6 @@ package Semenar2;
 import java.util.List;
 
 import Semenar2.Model.IAvtomat;
-import Semenar2.Model.Product;
-import Semenar2.Model.User;
 import Semenar2.Views.AvtomatView;
 import Semenar2.Views.BasketRequest;
 import Semenar2.Views.BasketView;

@@ -8,12 +8,16 @@ import Semenar2.Controler.OrderControler;
 import Semenar2.Controler.UserControler;
 import Semenar2.Model.Avtomat;
 import Semenar2.Model.AvtomatRepository;
+import Semenar2.Model.AvtomatService;
 import Semenar2.Model.BasketRepository;
 import Semenar2.Model.ProductRepository;
 import Semenar2.Model.UserRepository;
+import Semenar2.Model.UserService;
 import Semenar2.Model.GeoPoint;
 import Semenar2.Model.IAvtomat;
+import Semenar2.Model.IAvtomatService;
 import Semenar2.Model.IProduct;
+import Semenar2.Model.IUserService;
 import Semenar2.Model.Product;
 
 public class app {
@@ -31,9 +35,11 @@ public class app {
         productRepository = new ProductRepository();
         basketRepository = new BasketRepository();
 
-        avtomatControler = new AvtomatControler(avtomatRepository, basketRepository, productRepository);
+        IAvtomatService avtomatService = new AvtomatService(avtomatRepository, basketRepository, productRepository);
+        avtomatControler = new AvtomatControler(avtomatService);
         orderControler = new OrderControler(productRepository, basketRepository, userRepository);
-        userControler = new UserControler(userRepository);
+        IUserService userService = new UserService(userRepository);
+        userControler = new UserControler(userService);
     }
 
     public IAvtometsControler getAvtomatControler(){

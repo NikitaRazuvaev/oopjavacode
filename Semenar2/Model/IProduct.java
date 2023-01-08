@@ -5,5 +5,6 @@ public interface IProduct {
     String getName();
     IAvtomat getLocation();
     double getPrice();
+    boolean isBestProduct();
     
 }

@@ -1,13 +1,13 @@
 package Semenar2.Model;
 
 import java.util.Collection;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
+
 import org.w3c.dom.ranges.RangeException;
 
-public class AvtomatRepository implements IAvtomatRepository{
+public class AvtomatRepository extends AbstractRepository implements IAvtomatRepository{
     
     private Map<Integer, IAvtomat> avtomats;
     
@@ -18,7 +18,7 @@ public class AvtomatRepository implements IAvtomatRepository{
     @Override
     public IAvtomat create(IAvtomat avtomat) {
         if (avtomat.getId()==0){
-            int newId = Collections.max(avtomats.keySet()) +1;
+            int newId = calculetNextKey(avtomats.keySet());
             IAvtomat newAvtomat = new Avtomat(newId, avtomat);
             avtomats.put(Integer.valueOf(newId),newAvtomat);
             return newAvtomat;

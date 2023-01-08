@@ -2,26 +2,24 @@ package Semenar2.Controler;
 
 
 import Semenar2.Model.IUser;
-import Semenar2.Model.IUserRepository;
-import Semenar2.Model.User;
+import Semenar2.Model.IUserService;
 import Semenar2.Views.UserRegisterRequest;
 import Semenar2.Views.UserView;
 
 public class UserControler extends ControlersBase implements IUserControler {
 
-    private IUserRepository userRepository;
+    private IUserService userService;
 
-    public UserControler(IUserRepository repository){
-        this.userRepository = repository;
+    public UserControler(IUserService service){
+        this.userService = service;
     }
 
     @Override
-    public UserView registre(UserRegisterRequest request) throws Exception {
-        if (userRepository.getByName(request.name) == null) {
-            IUser newUser = new User(0, request.name);
-            newUser = userRepository.create(newUser);
-            return new UserView(newUser);
+    public UserView registre(UserRegisterRequest request){
+        IUser user = userService.registre(request.name); 
+        if (user != null) {
+            return new UserView(user);
         }
-        throw new Exception(String.format("user with name %s exist allready",request.name));
+        return null;
     }    
 }
