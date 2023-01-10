@@ -16,8 +16,10 @@ import Semenar2.Model.UserService;
 import Semenar2.Model.GeoPoint;
 import Semenar2.Model.IAvtomat;
 import Semenar2.Model.IAvtomatService;
+import Semenar2.Model.IOrderService;
 import Semenar2.Model.IProduct;
 import Semenar2.Model.IUserService;
+import Semenar2.Model.OrderService;
 import Semenar2.Model.Product;
 
 public class app {
@@ -37,7 +39,8 @@ public class app {
 
         IAvtomatService avtomatService = new AvtomatService(avtomatRepository, basketRepository, productRepository);
         avtomatControler = new AvtomatControler(avtomatService);
-        orderControler = new OrderControler(productRepository, basketRepository, userRepository);
+        IOrderService orderService = new OrderService(productRepository, userRepository, basketRepository);
+        orderControler = new OrderControler(orderService);
         IUserService userService = new UserService(userRepository);
         userControler = new UserControler(userService);
     }
