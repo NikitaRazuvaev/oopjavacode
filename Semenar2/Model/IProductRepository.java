@@ -1,7 +1,7 @@
 package Semenar2.Model;
 
 import java.util.Collection;
-import java.util.List;
+
 
 public interface IProductRepository {
     IProduct create(IProduct product);
@@ -10,6 +10,5 @@ public interface IProductRepository {
     boolean delete(IProduct product);
 
     Collection<IProduct> getAll();
-    List<IProduct> getProductByAvtomatID(int avtomatID);
     
 }

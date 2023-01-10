@@ -60,4 +60,12 @@ public class Basket implements IBasket{
         this.ispaid = true;
         this.code = code;
     }
+    @Override
+    public double totalPrice(){
+        int totalPrice = 0;
+        for (IProduct product : products) {
+            totalPrice += product.getPrice();
+        } 
+        return totalPrice;
+    }
 }

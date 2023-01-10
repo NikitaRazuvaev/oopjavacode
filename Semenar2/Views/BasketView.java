@@ -14,10 +14,9 @@ public class BasketView {
     public BasketView(IBasket basket) {
         this.id = basket.getId();
         this.products = new ArrayList<>();
-        this.totalPrice = 0;
         for (IProduct product : basket.getProducts()) {
-            totalPrice += product.getPrice();
-            this.products.add(new ProductView(product));
-        } 
+            this.products.add(new ProductView(product));  
+        }
+        this.totalPrice = basket.totalPrice();
     }
 }

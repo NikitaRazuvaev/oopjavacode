@@ -9,6 +9,4 @@ public interface IBasketRepository{
     boolean delete(IBasket basket);
 
     Collection<IBasket> getAll();
-    IBasket getOrCreateForUser(IUser user);
-
 }

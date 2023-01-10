@@ -10,5 +10,6 @@ public class Postamat extends Avtomat {
     public boolean isProductApplicable(IProduct product){
         return product instanceof Parcel;
     }
+    
 
 }

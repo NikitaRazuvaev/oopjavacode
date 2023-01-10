@@ -5,7 +5,6 @@ import java.util.Map;
 
 import org.w3c.dom.ranges.RangeException;
 
-import java.util.ArrayList;
 import java.util.Collection;
 
 
@@ -58,17 +57,4 @@ public class BasketRepository extends AbstractRepository implements IBasketRepos
         return false;
     }
 
-
-    @Override
-    public IBasket getOrCreateForUser(IUser user) {
-        for (IBasket basket : baskets.values()) {
-            if (basket.getUser().getId() == user.getId() && ! basket.isPaid()) {
-                return basket;
-            }
-        }
-        
-        IBasket basket = new Basket(0, user, new ArrayList<IProduct>(), false, "");
-        basket = create(basket);
-        return basket;
-    }
 }

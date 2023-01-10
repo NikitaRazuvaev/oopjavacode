@@ -9,4 +9,5 @@ public interface IBasket {
     boolean isPaid();
     String getCode();
     void setCode(String code);
+    double totalPrice();
 }

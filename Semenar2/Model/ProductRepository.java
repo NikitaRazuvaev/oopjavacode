@@ -48,15 +48,5 @@ public class ProductRepository extends AbstractRepository implements IProductRep
         }
         return false;
     }
-    @Override
-    public List<IProduct> getProductByAvtomatID(int avtomatID) {
-        List<IProduct> result = new ArrayList<>();
-        for (IProduct product : products.values()) {
-            if (product.getLocation().getId() == avtomatID) {
-                result.add(product);
-            }
-        }
-        return result;
-    }
-    
+   
 }
