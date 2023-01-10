@@ -25,16 +25,17 @@ public class demo {
         BasketView basket =  Application.getOrderControler().addProduct(basketRequest(products.get(2), user));
         String code = Application.getOrderControler().pay(paymentRequest(basket.totalPrice, basket, user));
         Application.getAvtomatControler().getOrderedProducts(purshcaseRequest(avtomat.id, code));
-        
+        ProductView bestProduct = Application.getAvtomatControler().getBestProduct(avtomat);
+
     }
     
     private static void fillDemoData(app app) throws Exception{
         IAvtomat avtomat = app.CreatAvtomat(10.0, 20.0);
-        app.addProduct(avtomat, "Coco-la", 15);
-        app.addProduct(avtomat, "Кириешки", 9);
-        app.addProduct(avtomat, "Мороженное радуга", 6);
-        app.addProduct(avtomat, "Вода", 10);
-        app.addProduct(avtomat, "FrashBar", 30);
+        app.addProduct(avtomat, "Coco-la", 15, true);
+        app.addProduct(avtomat, "Кириешки", 9, false);
+        app.addProduct(avtomat, "Мороженное радуга", 6, false);
+        app.addProduct(avtomat, "Вода", 10, true);
+        app.addProduct(avtomat, "FrashBar", 30, false);
     }
     private static UserRegisterRequest registerRequest(String name){
         UserRegisterRequest r = new UserRegisterRequest();

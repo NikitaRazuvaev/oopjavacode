@@ -36,4 +36,9 @@ public class AvtomatControler extends ControlersBase implements IAvtometsControl
         return result;
 
     }
+
+    @Override
+    public ProductView getBestProduct(AvtomatView avtomat) {
+        return new ProductView(avtomatService.getBestProduct(avtomat.id));
+    }
 }

@@ -7,17 +7,19 @@ public class Product implements IProduct{
     private double price;
     private boolean best;
     
-    public Product(int id, String name, IAvtomat location, double price){
+    public Product(int id, String name, IAvtomat location, double price, boolean isbest){
         this.id = id;
         this.name = name;
         this.location = location; 
         this.price = price;
+        this.best = isbest;
     }
 
     public Product(int id,IProduct product ){
         this.id = id;
         this.name = product.getName();
         this.location = product.getLocation(); 
+        this.best = product.isBestProduct();
     }
 
     @Override
@@ -42,7 +44,7 @@ public class Product implements IProduct{
 
     @Override
     public boolean isBestProduct() {
-        return false;
+        return best;
     }
     
 }

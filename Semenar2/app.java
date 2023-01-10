@@ -65,8 +65,8 @@ public class app {
         return avtomat; 
     }
 
-    public IProduct addProduct(IAvtomat avtomat, String name, double price) throws Exception{
-        IProduct product = new Product(0, name, avtomat, price);
+    public IProduct addProduct(IAvtomat avtomat, String name, double price, boolean isBest) throws Exception{
+        IProduct product = new Product(0, name, avtomat, price, isBest);
         if (!avtomat.isProductApplicable(product)) {
             throw new Exception("This avtomat not support this product");
         }

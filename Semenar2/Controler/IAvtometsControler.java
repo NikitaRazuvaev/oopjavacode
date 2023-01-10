@@ -11,5 +11,6 @@ import Semenar2.Views.PurshcaseRequest;
 public interface IAvtometsControler {
     List<AvtomatView> getAvtomats();
     List<ProductView> getOrderedProducts(PurshcaseRequest request);
+    ProductView getBestProduct(AvtomatView avtomat);
     
 }

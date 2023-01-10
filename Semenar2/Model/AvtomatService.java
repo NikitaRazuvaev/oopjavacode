@@ -52,4 +52,14 @@ public class AvtomatService implements IAvtomatService {
         }
         return null;
     }
+
+    @Override
+    public IProduct getBestProduct(int avtomatID) {
+       for (IProduct product : productRepository.getAll()) {
+        if (product.getLocation().getId() == avtomatID && product.isBestProduct()) {
+            return product;
+        }
+       } 
+        return null;
+    }
 }

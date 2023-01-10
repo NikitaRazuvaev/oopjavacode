@@ -4,8 +4,10 @@ import java.util.Collection;
 
 public interface IAvtomatService {
     
-    public Collection<IAvtomat> getAvtomats();
+    Collection<IAvtomat> getAvtomats();
 
-    public Collection<IProduct> getOrderedProducts(String code, int avtomatID);
+    Collection<IProduct> getOrderedProducts(String code, int avtomatID);
+
+    IProduct getBestProduct(int avtomatID);
 
 }
