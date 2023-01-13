@@ -4,9 +4,9 @@ import java.util.List;
 
 import Semenar2.Views.AvtomatView;
 import Semenar2.Views.BasketView;
-import Semenar2.Views.PaymentRequest;
 import Semenar2.Views.ProductView;
 import Semenar2.Views.Request.BasketRequest;
+import Semenar2.Views.Request.PaymentRequest;
 
 public interface IOrderControler {
     List<ProductView> getProducts(AvtomatView avtomat);
