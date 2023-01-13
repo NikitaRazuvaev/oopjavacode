@@ -1,5 +1,8 @@
 package Semenar2.Model;
 
+import Semenar2.Model.Interface.IAvtomat;
+import Semenar2.Model.Interface.IProduct;
+
 public class Avtomat implements IAvtomat {
     private int id;
     private GeoPoint point;

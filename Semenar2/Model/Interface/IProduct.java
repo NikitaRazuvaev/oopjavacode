@@ -1,4 +1,4 @@
-package Semenar2.Model;
+package Semenar2.Model.Interface;
 
 public interface IProduct {
     int getId();

@@ -1,7 +1,15 @@
-package Semenar2.Model;
+package Semenar2.Model.Service;
 
 import java.util.ArrayList;
 import java.util.Collection;
+
+import Semenar2.Model.Interface.IAvtomat;
+import Semenar2.Model.Interface.IAvtomatService;
+import Semenar2.Model.Interface.IBasket;
+import Semenar2.Model.Interface.IProduct;
+import Semenar2.Model.InterfaceRepository.IAvtomatRepository;
+import Semenar2.Model.InterfaceRepository.IBasketRepository;
+import Semenar2.Model.InterfaceRepository.IProductRepository;
 
 public class AvtomatService implements IAvtomatService {
 

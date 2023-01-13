@@ -1,4 +1,9 @@
-package Semenar2.Model;
+package Semenar2.Model.Service;
+
+import Semenar2.Model.User;
+import Semenar2.Model.Interface.IUser;
+import Semenar2.Model.InterfaceRepository.IUserRepository;
+import Semenar2.Model.InterfaceService.IUserService;
 
 public class UserService implements IUserService {
 

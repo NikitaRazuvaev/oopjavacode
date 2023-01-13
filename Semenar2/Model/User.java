@@ -1,5 +1,7 @@
 package Semenar2.Model;
 
+import Semenar2.Model.Interface.IUser;
+
 public class User implements IUser{
 
     private int id;

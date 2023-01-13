@@ -1,7 +1,17 @@
-package Semenar2.Model;
+package Semenar2.Model.Service;
 
 import java.util.ArrayList;
 import java.util.Collection;
+
+import Semenar2.Model.Basket;
+import Semenar2.Model.InterfaceRepository.IUserRepository;
+import Semenar2.Model.InterfaceRepository.IBasketRepository;
+import Semenar2.Model.Interface.IBasket;
+import Semenar2.Model.Interface.IProduct;
+import Semenar2.Model.InterfaceRepository.IProductRepository;
+import Semenar2.Model.Interface.IUser;
+import Semenar2.Model.InterfaceService.IOrderService;
+import Semenar2.Model.Repository.UserRepository;
 
 public class OrderService implements IOrderService{
     private IProductRepository productRepository;

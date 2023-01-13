@@ -1,4 +1,4 @@
-package Semenar2.Model;
+package Semenar2.Model.Repository;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -6,6 +6,10 @@ import java.util.Map;
 
 
 import org.w3c.dom.ranges.RangeException;
+
+import Semenar2.Model.Avtomat;
+import Semenar2.Model.Interface.IAvtomat;
+import Semenar2.Model.InterfaceRepository.IAvtomatRepository;
 
 public class AvtomatRepository extends AbstractRepository implements IAvtomatRepository{
     

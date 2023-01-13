@@ -1,5 +1,7 @@
 package Semenar2.Model;
 
+import Semenar2.Model.Interface.IProduct;
+
 public class AvtoApteka extends Avtomat{
 
     public AvtoApteka(int id, GeoPoint point) {

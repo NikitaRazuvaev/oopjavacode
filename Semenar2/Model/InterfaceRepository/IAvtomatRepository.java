@@ -1,6 +1,8 @@
-package Semenar2.Model;
+package Semenar2.Model.InterfaceRepository;
 
 import java.util.Collection;
+
+import Semenar2.Model.Interface.IAvtomat;
 
 public interface IAvtomatRepository {
     IAvtomat create(IAvtomat avtomat);

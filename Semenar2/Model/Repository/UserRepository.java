@@ -1,15 +1,16 @@
-package Semenar2.Model;
+package Semenar2.Model.Repository;
 
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.w3c.dom.ranges.RangeException;
+import Semenar2.Model.Interface.IUser;
+import Semenar2.Model.InterfaceRepository.IUserRepository;
 
 
 public class UserRepository extends AbstractRepository implements IUserRepository {
 
-    private Map<Integer, IUser> users;
+    public Map<Integer, IUser> users;
     
     public UserRepository(){
         users = new HashMap<>();
@@ -21,18 +22,7 @@ public class UserRepository extends AbstractRepository implements IUserRepositor
     
     @Override
     public IUser create(IUser user) {
-        if (user.getId() == 0){
-            int newId = calculetNextKey(users.keySet()) ;
-            IUser newUser = new User(newId, user);
-            users.put(Integer.valueOf(newId), newUser);
-            return newUser;
-        }
-
-        if (users.containsKey(user.getId())){
-            throw new RangeException((short) 1, String.format("user with id %d is present in repository", user.getId()));
-        }
-        users.put(Integer.valueOf(user.getId()), user);
-        return user; 
+        return user.create(this);
     }
 
 

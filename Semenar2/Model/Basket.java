@@ -2,6 +2,10 @@ package Semenar2.Model;
 
 import java.util.Collection;
 
+import Semenar2.Model.Interface.IBasket;
+import Semenar2.Model.Interface.IProduct;
+import Semenar2.Model.Interface.IUser;
+
 /**
  * Basket
  */

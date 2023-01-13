@@ -2,16 +2,16 @@ package Semenar2;
 
 import java.util.List;
 
-import Semenar2.Model.IAvtomat;
+import Semenar2.Model.Interface.IAvtomat;
 import Semenar2.Views.AvtomatView;
-import Semenar2.Views.BasketRequest;
 import Semenar2.Views.BasketView;
 import Semenar2.Views.PaymentMethod;
 import Semenar2.Views.PaymentRequest;
 import Semenar2.Views.ProductView;
-import Semenar2.Views.PurshcaseRequest;
-import Semenar2.Views.UserRegisterRequest;
 import Semenar2.Views.UserView;
+import Semenar2.Views.Request.BasketRequest;
+import Semenar2.Views.Request.PurshcaseRequest;
+import Semenar2.Views.Request.UserRegisterRequest;
 
 public class demo {
     public static void main(String[] args) throws Exception {

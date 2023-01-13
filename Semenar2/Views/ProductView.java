@@ -1,6 +1,6 @@
 package Semenar2.Views;
 
-import Semenar2.Model.IProduct;
+import Semenar2.Model.Interface.IProduct;
 
 public class ProductView {
     public int id;

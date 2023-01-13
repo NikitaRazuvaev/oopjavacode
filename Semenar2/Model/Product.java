@@ -1,5 +1,8 @@
 package Semenar2.Model;
 
+import Semenar2.Model.Interface.IAvtomat;
+import Semenar2.Model.Interface.IProduct;
+
 public class Product implements IProduct{
     private int id;
     private String name;

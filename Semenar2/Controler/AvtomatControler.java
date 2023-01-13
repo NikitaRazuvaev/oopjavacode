@@ -3,12 +3,13 @@ package Semenar2.Controler;
 import java.util.ArrayList;
 import java.util.List;
 
-import Semenar2.Model.IAvtomat;
-import Semenar2.Model.IAvtomatService;
-import Semenar2.Model.IProduct;
+import Semenar2.Controler.Interface.IAvtometsControler;
+import Semenar2.Model.Interface.IAvtomat;
+import Semenar2.Model.Interface.IAvtomatService;
+import Semenar2.Model.Interface.IProduct;
 import Semenar2.Views.AvtomatView;
 import Semenar2.Views.ProductView;
-import Semenar2.Views.PurshcaseRequest;
+import Semenar2.Views.Request.PurshcaseRequest;
 
 public class AvtomatControler extends ControlersBase implements IAvtometsControler {
 

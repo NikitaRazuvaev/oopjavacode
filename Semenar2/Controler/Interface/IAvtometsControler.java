@@ -1,4 +1,4 @@
-package Semenar2.Controler;
+package Semenar2.Controler.Interface;
 
 
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.List;
 
 import Semenar2.Views.AvtomatView;
 import Semenar2.Views.ProductView;
-import Semenar2.Views.PurshcaseRequest;
+import Semenar2.Views.Request.PurshcaseRequest;
 
 public interface IAvtometsControler {
     List<AvtomatView> getAvtomats();

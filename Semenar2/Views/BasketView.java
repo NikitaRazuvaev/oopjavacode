@@ -3,8 +3,8 @@ package Semenar2.Views;
 import java.util.ArrayList;
 import java.util.List;
 
-import Semenar2.Model.IBasket;
-import Semenar2.Model.IProduct;
+import Semenar2.Model.Interface.IBasket;
+import Semenar2.Model.Interface.IProduct;
 
 public class BasketView {
     public int id;

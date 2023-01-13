@@ -3,13 +3,14 @@ package Semenar2.Controler;
 import java.util.ArrayList;
 import java.util.List;
 
-import Semenar2.Model.IOrderService;
-import Semenar2.Model.IProduct;
+import Semenar2.Controler.Interface.IOrderControler;
+import Semenar2.Model.Interface.IProduct;
+import Semenar2.Model.InterfaceService.IOrderService;
 import Semenar2.Views.AvtomatView;
-import Semenar2.Views.BasketRequest;
 import Semenar2.Views.BasketView;
 import Semenar2.Views.PaymentRequest;
 import Semenar2.Views.ProductView;
+import Semenar2.Views.Request.BasketRequest;
 
 public class OrderControler extends ControlersBase implements IOrderControler {
    

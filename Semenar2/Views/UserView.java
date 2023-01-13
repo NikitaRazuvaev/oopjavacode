@@ -1,6 +1,6 @@
 package Semenar2.Views;
 
-import Semenar2.Model.IUser;
+import Semenar2.Model.Interface.IUser;
 
 public class UserView {
     public int id;

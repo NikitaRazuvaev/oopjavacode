@@ -1,6 +1,7 @@
-package Semenar2.Controler;
+package Semenar2.Controler.Interface;
 
 import Semenar2.Views.*;
+import Semenar2.Views.Request.UserRegisterRequest;
 
 public interface IUserControler {
     /**

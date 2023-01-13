@@ -1,10 +1,10 @@
-package Semenar2.Model;
+package Semenar2.Model.Repository;
 
 import java.util.Collection;
 import java.util.Collections;
 
 public abstract class AbstractRepository {
-    protected int calculetNextKey(Collection<Integer> keyCollection){
+    public int calculetNextKey(Collection<Integer> keyCollection){
         if (keyCollection == null || keyCollection.size() == 0) {
             return 1;
         }

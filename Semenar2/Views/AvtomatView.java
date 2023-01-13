@@ -2,7 +2,7 @@ package Semenar2.Views;
 
 
 import Semenar2.Model.GeoPoint;
-import Semenar2.Model.IAvtomat;
+import Semenar2.Model.Interface.IAvtomat;
 
 public class AvtomatView {
     public int id;

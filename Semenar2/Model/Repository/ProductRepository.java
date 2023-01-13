@@ -1,7 +1,12 @@
-package Semenar2.Model;
+package Semenar2.Model.Repository;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import Semenar2.Model.Product;
+import Semenar2.Model.Interface.IProduct;
+import Semenar2.Model.InterfaceRepository.IProductRepository;
+
 import java.util.Collection;
 
 public class ProductRepository extends AbstractRepository implements IProductRepository{

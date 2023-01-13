@@ -1,9 +1,13 @@
-package Semenar2.Model;
+package Semenar2.Model.Repository;
 
 import java.util.HashMap;
 import java.util.Map;
 
 import org.w3c.dom.ranges.RangeException;
+
+import Semenar2.Model.Basket;
+import Semenar2.Model.Interface.IBasket;
+import Semenar2.Model.InterfaceRepository.IBasketRepository;
 
 import java.util.Collection;
 

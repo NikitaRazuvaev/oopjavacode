@@ -1,10 +1,11 @@
 package Semenar2.Controler;
 
 
-import Semenar2.Model.IUser;
-import Semenar2.Model.IUserService;
-import Semenar2.Views.UserRegisterRequest;
+import Semenar2.Controler.Interface.IUserControler;
+import Semenar2.Model.Interface.IUser;
+import Semenar2.Model.InterfaceService.IUserService;
 import Semenar2.Views.UserView;
+import Semenar2.Views.Request.UserRegisterRequest;
 
 public class UserControler extends ControlersBase implements IUserControler {
 
