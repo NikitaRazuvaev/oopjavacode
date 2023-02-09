@@ -10,5 +10,5 @@ public interface IUserRepository {
     IUser update(IUser user);
     boolean delete(IUser user);
     
-    Collection<IUser> getAll();
+    Collection<IUser> getAll(); // Заменить на функцию search с возможностю задания предикатта 
 }

@@ -20,7 +20,7 @@ public class OrderControler extends ControlersBase implements IOrderControler {
         this.orderService = orderService;
     }
 
-    @Override
+    @Override                                                       
     public List<ProductView> getProducts(AvtomatView avtomat) {
         List<ProductView> result = new ArrayList<>();
         for (IProduct product : orderService.getProducts(avtomat.id)) {
@@ -40,7 +40,7 @@ public class OrderControler extends ControlersBase implements IOrderControler {
         return new BasketView(orderService.removeProduct(request.product.id, request.user.id));
     }
 
-    @Override
+    @Override                                                   // Нарушает принцип единственной ответственности. Вынести в отдельный контролер
     public String pay(PaymentRequest request) throws Exception {
         return orderService.pay(request.user.id, request.amount);
     }

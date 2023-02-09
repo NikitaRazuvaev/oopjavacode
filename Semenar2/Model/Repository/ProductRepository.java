@@ -15,7 +15,7 @@ public class ProductRepository extends AbstractRepository implements IProductRep
     public ProductRepository(){
         products = new HashMap<>();
     }
-    public Collection<IProduct> getAll()  {
+    public Collection<IProduct> getAll()  { // Заменить на функцию search с возможностю задания предикатта 
         return products.values();
     }
 

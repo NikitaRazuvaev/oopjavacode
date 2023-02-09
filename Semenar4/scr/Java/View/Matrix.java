@@ -1,4 +1,4 @@
-package Semenar4.View;
+package Semenar4.scr.Java.View;
 
 import java.util.List;
 

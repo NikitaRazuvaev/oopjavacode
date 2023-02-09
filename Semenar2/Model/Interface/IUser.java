@@ -8,7 +8,7 @@ import Semenar2.Model.Repository.UserRepository;
 public interface IUser {
     int getId();
     String getName();
-    default IUser create(UserRepository userRepository) {
+    default IUser create(UserRepository userRepository) { // Реализацию вынести в класс 
         if (getId() == 0){
             int newId = userRepository.calculetNextKey(userRepository.users.keySet()) ;
             IUser newUser = new User(newId, this);

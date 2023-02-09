@@ -16,7 +16,7 @@ public class UserRepository extends AbstractRepository implements IUserRepositor
         users = new HashMap<>();
     }
     
-    public Collection<IUser> getAll()  {
+    public Collection<IUser> getAll() { // Заменить на функцию search с возможностю задания предикатта 
         return users.values();
     }
     

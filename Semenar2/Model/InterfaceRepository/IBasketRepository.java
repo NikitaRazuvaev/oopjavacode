@@ -10,5 +10,5 @@ public interface IBasketRepository{
     IBasket update(IBasket basket);
     boolean delete(IBasket basket);
 
-    Collection<IBasket> getAll();
+    Collection<IBasket> getAll(); // Заменить на функцию search с возможностю задания предикатта 
 }

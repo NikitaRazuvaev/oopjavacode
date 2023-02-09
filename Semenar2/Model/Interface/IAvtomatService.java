@@ -6,8 +6,8 @@ public interface IAvtomatService {
     
     Collection<IAvtomat> getAvtomats();
 
-    Collection<IProduct> getOrderedProducts(String code, int avtomatID);
+    Collection<IProduct> getOrderedProducts(String code, int avtomatID); // Нарушает принцип разделения интерфейса Вынести в отдельный интерфейс для продуктов.
 
-    IProduct getBestProduct(int avtomatID);
+    IProduct getBestProduct(int avtomatID); // Нарушает принцип разделения интерфейса Вынести в отдельный интерфейс для продуктов.
 
 }

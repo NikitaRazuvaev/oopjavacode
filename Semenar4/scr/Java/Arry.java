@@ -1,4 +1,4 @@
-package Semenar4;
+package Semenar4.scr.Java;
 
 public class Arry {
     public static class MatrixMultiplayer{

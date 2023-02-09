@@ -1,12 +1,12 @@
-package Semenar4.Controler;
+package Semenar4.scr.Java.Controler;
 
-import Semenar4.Controler.Helpers.IArrayToMatrixConvertor;
-import Semenar4.Controler.Helpers.IMatrixToArrayConvertor;
-import Semenar4.Model.IArrayMultiplayService;
-import Semenar4.Model.IArrayValidationService;
-import Semenar4.Model.ValidationResult;
-import Semenar4.View.Request;
-import Semenar4.View.Response;
+import Semenar4.scr.Java.Controler.Helpers.IArrayToMatrixConvertor;
+import Semenar4.scr.Java.Controler.Helpers.IMatrixToArrayConvertor;
+import Semenar4.scr.Java.Model.IArrayMultiplayService;
+import Semenar4.scr.Java.Model.IArrayValidationService;
+import Semenar4.scr.Java.Model.ValidationResult;
+import Semenar4.scr.Java.View.Request;
+import Semenar4.scr.Java.View.Response;
 
 public class ArrayControler {
     private IArrayMultiplayService multiplayService;

@@ -25,12 +25,12 @@ public class AvtomatService implements IAvtomatService {
     }
 
     @Override
-    public Collection<IAvtomat> getAvtomats() {
+    public Collection<IAvtomat> getAvtomats() { 
         return avtomatRepository.getAll();
     }
 
     @Override
-    public Collection<IProduct> getOrderedProducts(String code, int avtomatID) {
+    public Collection<IProduct> getOrderedProducts(String code, int avtomatID) { // Нарушает принцип единственной ответственности. Вынести в отдельный сервис
 
         IBasket basket = getBasketBycode(code);
         if (basket == null) {
@@ -52,7 +52,7 @@ public class AvtomatService implements IAvtomatService {
         return result;
     }
 
-    private IBasket getBasketBycode(String code) {
+    private IBasket getBasketBycode(String code) { // Нарушает принцип единственной ответственности. Вынести в отдельный сервис
         for (IBasket basket : basketRepository.getAll()) {
             if (basket.getCode() == code) {
                 return basket;
@@ -62,7 +62,7 @@ public class AvtomatService implements IAvtomatService {
     }
 
     @Override
-    public IProduct getBestProduct(int avtomatID) {
+    public IProduct getBestProduct(int avtomatID) { // Нарушает принцип единственной ответственности. Вынести в отдельный сервис
        for (IProduct product : productRepository.getAll()) {
         if (product.getLocation().getId() == avtomatID && product.isBestProduct()) {
             return product;

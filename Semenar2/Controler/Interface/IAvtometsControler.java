@@ -10,7 +10,7 @@ import Semenar2.Views.Request.PurshcaseRequest;
 
 public interface IAvtometsControler {
     List<AvtomatView> getAvtomats();
-    List<ProductView> getOrderedProducts(PurshcaseRequest request);
-    ProductView getBestProduct(AvtomatView avtomat);
+    List<ProductView> getOrderedProducts(PurshcaseRequest request); // Нарушает принцип разделения интерфейса  Вынести в отдельный интерфейс (для заказов продуктов)
+    ProductView getBestProduct(AvtomatView avtomat); // Нарушает принцип разделения интерфейса  Вынести в отдельный интерфейс (Аналитика продуктов)
     
 }

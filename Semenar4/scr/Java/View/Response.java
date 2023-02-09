@@ -1,4 +1,4 @@
-package Semenar4.View;
+package Semenar4.scr.Java.View;
 
 public class Response {
     public boolean isSuccess;

@@ -11,6 +11,6 @@ public interface IProductRepository {
     IProduct update(IProduct product);
     boolean delete(IProduct product);
 
-    Collection<IProduct> getAll();
+    Collection<IProduct> getAll(); // Заменить на функцию search с возможностю задания предикатта 
     
 }

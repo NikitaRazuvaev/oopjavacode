@@ -1,6 +1,6 @@
-package Semenar4.Controler.Helpers;
+package Semenar4.scr.Java.Controler.Helpers;
 
-import Semenar4.View.Matrix;
+import Semenar4.scr.Java.View.Matrix;
 
 public interface IMatrixToArrayConvertor {
     double [][] matrixToArray(Matrix m);

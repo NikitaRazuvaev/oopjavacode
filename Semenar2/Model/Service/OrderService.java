@@ -25,7 +25,7 @@ public class OrderService implements IOrderService{
     }
 
     @Override
-    public Collection<IProduct> getProducts(int avtomatID) {
+    public Collection<IProduct> getProducts(int avtomatID) { // Нарушает принцип единственной ответственности. Вынести в отдельный сервис
         Collection<IProduct> result = new ArrayList<>();
         for (IProduct product : productRepository.getAll()) {
             if (product.getLocation().getId() == avtomatID) {
@@ -36,7 +36,7 @@ public class OrderService implements IOrderService{
     }
 
     @Override
-    public IBasket addProduct(int productID, int userID) {
+    public IBasket addProduct(int productID, int userID) {  // Нарушает принцип единственной ответственности. Вынести в отдельный сервис
         IProduct product = productRepository.get(productID);
         if (product == null){
             return null;
@@ -52,7 +52,7 @@ public class OrderService implements IOrderService{
     }
 
     @Override
-    public IBasket removeProduct(int productID, int userID){
+    public IBasket removeProduct(int productID, int userID){  // Нарушает принцип единственной ответственности. Вынести в отдельный сервис
         IProduct product = productRepository.get(productID);
         if (product == null){
             return null;
@@ -69,7 +69,7 @@ public class OrderService implements IOrderService{
     }
 
     @Override
-    public String pay(int userID, double amount) {
+    public String pay(int userID, double amount) { 
         IUser user = userRepository.get(userID);
         if (user == null){
            return null;
@@ -85,7 +85,7 @@ public class OrderService implements IOrderService{
         return code;
     }
 
-    private IBasket getOrCreateForUser(IUser user) {
+    private IBasket getOrCreateForUser(IUser user) {  // Нарушает принцип единственной ответственности. Вынести в отдельный сервис
         for (IBasket basket : basketRepository.getAll()) {
             if (basket.getUser().getId() == user.getId() && ! basket.isPaid()) {
                 return basket;

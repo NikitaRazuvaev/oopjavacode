@@ -12,6 +12,6 @@ public interface IOrderControler {
     List<ProductView> getProducts(AvtomatView avtomat);
     BasketView addProduct(BasketRequest request) throws Exception;
     BasketView removeProduct(BasketRequest request) throws Exception;
-    String pay(PaymentRequest request) throws Exception;
+    String pay(PaymentRequest request) throws Exception; // Нарушает принцип разделения интерфейса  Вынести в отдельный интерфейс(для оплаты продуктов)
     
 }

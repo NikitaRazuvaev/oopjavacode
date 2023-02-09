@@ -28,7 +28,7 @@ public class AvtomatControler extends ControlersBase implements IAvtometsControl
         return rezult;
     }
 
-    @Override
+    @Override                                                               // Нарушает принцип единственной ответственности. Вынести в отдельный контролер
     public List<ProductView> getOrderedProducts(PurshcaseRequest request) {
         List<ProductView> result = new ArrayList<>();
         for (IProduct product : avtomatService.getOrderedProducts(request.code, request.avtomatID)) {
@@ -38,7 +38,7 @@ public class AvtomatControler extends ControlersBase implements IAvtometsControl
 
     }
 
-    @Override
+    @Override                                                               // Нарушает принцип единственной ответственности. Вынести в отдельный контролер
     public ProductView getBestProduct(AvtomatView avtomat) {
         return new ProductView(avtomatService.getBestProduct(avtomat.id));
     }

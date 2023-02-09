@@ -9,5 +9,5 @@ public interface IOrderService {
     Collection<IProduct> getProducts(int avtomatID);
     IBasket addProduct(int productID, int userID) ;
     IBasket removeProduct(int productID, int userID);
-    String pay(int userID, double amount);
+    String pay(int userID, double amount); // Нарушает принцип разделения интерфейса Вынести в отдельный интерфейс для оплаты продуктов.
 }

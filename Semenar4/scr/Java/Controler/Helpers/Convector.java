@@ -1,10 +1,10 @@
-package Semenar4.Controler.Helpers;
+package Semenar4.scr.Java.Controler.Helpers;
 
 
 import java.util.ArrayList;
 import java.util.List;
 
-import Semenar4.View.Matrix;
+import Semenar4.scr.Java.View.Matrix;
 
 public class Convector implements IArrayToMatrixConvertor, IMatrixToArrayConvertor {
 

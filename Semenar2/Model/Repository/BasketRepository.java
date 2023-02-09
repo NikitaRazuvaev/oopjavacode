@@ -19,7 +19,7 @@ public class BasketRepository extends AbstractRepository implements IBasketRepos
     public BasketRepository(){
         baskets = new HashMap<>();
     }
-    public Collection<IBasket> getAll()  {
+    public Collection<IBasket> getAll()  { // Заменить на функцию search с возможностю задания предикатта 
         return baskets.values();
     }
     @Override

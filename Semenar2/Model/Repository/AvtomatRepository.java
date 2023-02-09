@@ -59,7 +59,7 @@ public class AvtomatRepository extends AbstractRepository implements IAvtomatRep
     }
 
     @Override
-    public Collection<IAvtomat> getAll() {
+    public Collection<IAvtomat> getAll() { // Заменить на функцию search с возможностю задания предикатта 
         return avtomats.values();
     }
     
